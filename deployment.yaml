@@ -3,7 +3,7 @@ kind: Deployment
 metadata:
   name: mlops-task5
 spec:
-  replicas: 2
+  replicas: 1
   selector:
     matchLabels:
       app: mlops-task5
@@ -13,7 +13,7 @@ spec:
         app: mlops-task5
     spec:
       containers:
-        - name: mlops-task5
-          image: mlops-task5:latest
+        - name: mlops-task5-container
+          image: rayyanatttaullah09/mlops-task5:latest
           ports:
             - containerPort: 5000
