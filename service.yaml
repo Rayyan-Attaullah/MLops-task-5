@@ -1,0 +1,14 @@
+# kubernetes/service.yaml
+apiVersion: v1
+kind: Service
+metadata:
+  name: Mlops-task5-service
+spec:
+  type: NodePort
+  selector:
+    app: Mlops-task5
+  ports:
+    - protocol: TCP
+      port: 5000
+      targetPort: 5000
+      nodePort: 30007
